@@ -1,4 +1,6 @@
 .idea
 
 !public/vendor
-vendor
+vendor/*
+cache/*
+!cache/.gitkeep

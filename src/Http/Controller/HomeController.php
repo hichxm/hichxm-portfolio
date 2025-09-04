@@ -9,7 +9,7 @@ class HomeController
 {
     public static function home(Request $request, Response $response): Response
     {
-        $response->setContent('-!');
+        $response->setContent(render_template('layout.twig'));
         $response->setStatusCode(200);
 
         return $response;
