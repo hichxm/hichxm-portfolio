@@ -1,0 +1,14 @@
+{
+  "require": {
+    "symfony/http-foundation": "^v7.3.3",
+    "symfony/routing": "^v7.3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hichxm\\": "src/"
+    },
+    "files": [
+      "framework/helper.php"
+    ]
+  }
+}
