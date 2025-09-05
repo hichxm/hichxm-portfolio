@@ -28,8 +28,8 @@ class HomeController
                                 'image_path' => 'vue.png',
                             ],
                             [
-                                'name' => 'Webpack',
-                                'image_path' => 'webpack.png',
+                                'name' => 'TailwindCSS',
+                                'image_path' => 'tailwind.png',
                             ],
                         ],
                     ],
@@ -132,31 +132,44 @@ class HomeController
         ],
         'projects' => [
             [
-                'name' => 'Booki',
-                'description' => 'Intégration d\'une maquette Figma avec plusieurs critère technique dans le cadre de ma formation OpenClassrooms',
-                'link' => [
-                    'text' => 'Github',
-                    'icon' => 'fab fa-github',
-                    'href' => 'https://github.com/hichxm/openclassrooms-booki',
-                ]
+                'name' => 'Booki - Trouvez votre hébergement',
+                'link' => 'https://hichxm.github.io/openclassrooms-booki/',
+                'description' => 'Intégration d\'une maquette Figma pour l\'entreprise fictive Booki (location immobilière) responsive (desktop, tablet et mobile) en HTML & CSS.',
+                'image_path' => 'booki.webp',
+                'links' => [
+                    [
+                        'text' => 'Github',
+                        'type' => 'primary',
+                        'icon' => 'fab fa-github',
+                        'href' => 'https://github.com/hichxm/openclassrooms-booki',
+                    ],
+                    [
+                        'text' => 'Visiter',
+                        'type' => 'outline-primary',
+                        'icon' => 'fab fa-github',
+                        'href' => 'https://hichxm.github.io/openclassrooms-booki',
+                    ],
+                ],
             ],
             [
-                'name' => 'Kasa',
-                'description' => 'Intégration d\'une maquette Figma avec plusieurs critère technique dans le cadre de ma formation OpenClassrooms',
-                'link' => [
-                    'text' => 'Github',
-                    'icon' => 'fab fa-github',
-                    'href' => 'https://github.com/hichxm/openclassrooms-booki',
-                ]
-            ],
-            [
-                'name' => 'Kasa',
-                'description' => 'Intégration d\'une maquette Figma avec plusieurs critère technique dans le cadre de ma formation OpenClassrooms',
-                'link' => [
-                    'text' => 'Github',
-                    'icon' => 'fab fa-github',
-                    'href' => 'https://github.com/hichxm/openclassrooms-booki',
-                ]
+                'name' => 'Kasa - Chez vous, partout et ailleurs',
+                'link' => 'https://hichxm.github.io/openclassrooms-kasa/',
+                'description' => 'Intégration d\'une maquette Figma pour l\'entreprise fictive Kasa (agence immobilière) avec React en respectant au mieux les bonnes pratiques du framework.',
+                'image_path' => 'kasa.webp',
+                'links' => [
+                    [
+                        'text' => 'Github',
+                        'type' => 'primary',
+                        'icon' => 'fab fa-github',
+                        'href' => 'https://github.com/hichxm/openclassrooms-kasa',
+                    ],
+                    [
+                        'text' => 'Visiter',
+                        'type' => 'outline-primary',
+                        'icon' => 'fas fa-globe',
+                        'href' => 'https://hichxm.github.io/openclassrooms-kasa/',
+                    ]
+                ],
             ],
         ],
     ];

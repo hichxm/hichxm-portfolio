@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-style.css"/>
     <link rel="stylesheet" href="assets/css/owl.css"/>
     <link rel="stylesheet" href="assets/css/lightbox.css"/>
+    <link rel="stylesheet" href="assets/css/custom.css"/>
 </head>
 
 <body>
@@ -151,16 +152,21 @@
                 {% for project in data.projects %}
                     <div class="card mb-4" style="background-color: #2125297E;">
                         <div class="row no-gutters">
-                            <div class="col-md-5 rounded-left overflow-hidden {{ loop.index % 2 == 0 ? 'order-md-1' : '' }}">
-                                <img src="https://picsum.photos/id/{{ loop.index * 100 }}/600/400" class="h-100" style="object-fit: cover" alt="{{ project.name }}">
-                            </div>
+                            <a href="{{ project.link }}" target="_blank" class="col-md-5 overflow-hidden position-relative {{ loop.index % 2 == 0 ? 'order-md-1 rounded-right' : 'rounded-left' }}">
+                                <div class="w-100 h-100 position-absolute d-none d-md-block" style="background-color: rgba(0,0,0,0.1);"></div>
+                                <img src="assets/images/project/{{ project.image_path }}" class="h-100" style="object-fit: cover" alt="{{ project.name }}">
+                            </a>
                             <div class="col-md-7">
-                                <div class="card-body d-flex flex-column">
-                                    <h3 class="text-white-50 h3">{{ project.name|e }}</h3>
-                                    <p class="text-white-50">{{ project.description|e }}</p>
-                                    {% if (project.link) %}
+                                <div class="card-body d-flex flex-column justify-content-between h-100">
+                                    <div>
+                                        <h3 class="text-white-90 h3">{{ project.name|e }}</h3>
+                                        <p class="text-white-90">{{ project.description|e }}</p>
+                                    </div>
+                                    {% if (project.links) %}
                                         <div>
-                                            <a href="{{ project.link.href }}" class="btn btn-primary">{{ project.link.text|e }}</a>
+                                            {% for link in project.links %}
+                                                <a href="{{ link.href }}" target="_blank" class="text-white btn btn-{{ link.type ?? 'primary' }}">{{ link.text|e }}</a>
+                                            {% endfor %}
                                         </div>
                                     {% endif %}
                                 </div>
