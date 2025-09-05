@@ -42,7 +42,11 @@
                 </div>
                 <div class="author-content">
                     <h4>Hicham SLIMANI</h4>
-                    <span>Développeur WEB</span>
+                    <span class="d-block mb-1">Développeur WEB</span>
+                    <a href="#" class="btn btn-download-menu text-white">
+                        <i class="fa fa-download"></i>
+                        Télécharger mon CV
+                    </a>
                 </div>
                 <nav class="main-nav" role="navigation">
                     <ul class="main-menu">
@@ -55,21 +59,12 @@
                 <div class="social-network">
                     <ul class="soial-icons">
                         <li>
-                            <a href="https://fb.com/templatemo"
-                            ><i class="fa fa-facebook"></i
-                                ></a>
+                            <a href="https://github.com/hichxm">
+                                <i class="fa fa-github"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-rss"></i></a>
+                            <a href="#"><i class="fa fa-globe"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -157,7 +152,7 @@
                         <div class="row no-gutters">
                             <a href="{{ project.link }}" target="_blank" class="col-md-5 overflow-hidden position-relative {{ loop.index % 2 == 0 ? 'order-md-1 rounded-right' : 'rounded-left' }}">
                                 <div class="w-100 h-100 position-absolute p-1 d-flex justify-content-end align-items-end" style="background-color: rgba(0,0,0,0.1);">
-                                    <div class="d-flex flex-row flex-wrap justify-content-end" style="gap: 0.25rem;">
+                                    <div class="d-flex flex-sm-row flex-column flex-wrap-reverse justify-content-end" style="gap: 0.25rem;">
                                         {% for tag in project.tags %}
                                             <span style="background-color: rgb(0, 0, 0, 0.7);" class="badge badge-outline-primary border border-primary font-weight-normal shadow px-2 py-1 text-white-90">{{ tag }}</span>
                                         {% endfor %}
