@@ -33,7 +33,7 @@ if(!function_exists('render_template')) {
     function render_template(string $template, array $data = []): string {
         $loader = new FilesystemLoader(__DIR__ . '/../templates');
         $twig = new Environment($loader, [
-            'cache' => __DIR__ . '/../cache/twig',
+//            'cache' => __DIR__ . '/../cache/twig',
         ]);
 
         return $twig->render($template, $data);
