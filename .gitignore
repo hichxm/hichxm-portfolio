@@ -4,3 +4,5 @@
 vendor/*
 cache/*
 !cache/.gitkeep
+
+.env

@@ -32,10 +32,16 @@ if(!function_exists('render_template')) {
      */
     function render_template(string $template, array $data = []): string {
         $loader = new FilesystemLoader(__DIR__ . '/../templates');
-        $twig = new Environment($loader, [
-//            'cache' => __DIR__ . '/../cache/twig',
+        $twig = new Environment($loader, isDebugMode() ? [] : [
+            'cache' => __DIR__ . '/../cache/twig',
         ]);
 
         return $twig->render($template, $data);
+    }
+}
+
+if(!function_exists('isDebugMode')) {
+    function isDebugMode(): bool {
+        return $_ENV['APP_DEBUG'] == 'true';
     }
 }
