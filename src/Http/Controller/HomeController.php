@@ -13,19 +13,6 @@ class HomeController
                 'name' => 'Languages de programmation',
                 'sub-categories' =>  [
                     [
-                        'name' => 'Backend',
-                        'elements' =>  [
-                            [
-                                'name' => 'PHP',
-                                'image_path' => 'php.png',
-                            ],
-                            [
-                                'name' => 'NodeJS',
-                                'image_path' => 'nodejs.png',
-                            ],
-                        ],
-                    ],
-                    [
                         'name' => 'Frontend',
                         'elements' =>  [
                             [
@@ -43,6 +30,19 @@ class HomeController
                             [
                                 'name' => 'Webpack',
                                 'image_path' => 'webpack.png',
+                            ],
+                        ],
+                    ],
+                    [
+                        'name' => 'Backend',
+                        'elements' =>  [
+                            [
+                                'name' => 'PHP',
+                                'image_path' => 'php.png',
+                            ],
+                            [
+                                'name' => 'NodeJS',
+                                'image_path' => 'nodejs.png',
                             ],
                         ],
                     ],
@@ -128,6 +128,35 @@ class HomeController
                         ],
                     ],
                 ],
+            ],
+        ],
+        'projects' => [
+            [
+                'name' => 'Booki',
+                'description' => 'Intégration d\'une maquette Figma avec plusieurs critère technique dans le cadre de ma formation OpenClassrooms',
+                'link' => [
+                    'text' => 'Github',
+                    'icon' => 'fab fa-github',
+                    'href' => 'https://github.com/hichxm/openclassrooms-booki',
+                ]
+            ],
+            [
+                'name' => 'Kasa',
+                'description' => 'Intégration d\'une maquette Figma avec plusieurs critère technique dans le cadre de ma formation OpenClassrooms',
+                'link' => [
+                    'text' => 'Github',
+                    'icon' => 'fab fa-github',
+                    'href' => 'https://github.com/hichxm/openclassrooms-booki',
+                ]
+            ],
+            [
+                'name' => 'Kasa',
+                'description' => 'Intégration d\'une maquette Figma avec plusieurs critère technique dans le cadre de ma formation OpenClassrooms',
+                'link' => [
+                    'text' => 'Github',
+                    'icon' => 'fab fa-github',
+                    'href' => 'https://github.com/hichxm/openclassrooms-booki',
+                ]
             ],
         ],
     ];
