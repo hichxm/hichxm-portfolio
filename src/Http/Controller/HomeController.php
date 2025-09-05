@@ -136,17 +136,22 @@ class HomeController
                 'link' => 'https://hichxm.github.io/openclassrooms-booki/',
                 'description' => 'Intégration d\'une maquette Figma pour l\'entreprise fictive Booki (location immobilière) responsive (desktop, tablet et mobile) en HTML & CSS.',
                 'image_path' => 'booki.webp',
+                'tags' => [
+                    'HTML & CSS',
+                    'Responsive',
+                    'From scratch',
+                ],
                 'links' => [
                     [
                         'text' => 'Github',
                         'type' => 'primary',
-                        'icon' => 'fab fa-github',
+                        'icon' => 'fa fa-github',
                         'href' => 'https://github.com/hichxm/openclassrooms-booki',
                     ],
                     [
                         'text' => 'Visiter',
                         'type' => 'outline-primary',
-                        'icon' => 'fab fa-github',
+                        'icon' => 'fa fa-github',
                         'href' => 'https://hichxm.github.io/openclassrooms-booki',
                     ],
                 ],
@@ -156,18 +161,50 @@ class HomeController
                 'link' => 'https://hichxm.github.io/openclassrooms-kasa/',
                 'description' => 'Intégration d\'une maquette Figma pour l\'entreprise fictive Kasa (agence immobilière) avec React en respectant au mieux les bonnes pratiques du framework.',
                 'image_path' => 'kasa.webp',
+                'tags' => [
+                    'HTML & CSS',
+                    'React',
+                    'Responsive',
+                    'From scratch',
+                ],
                 'links' => [
                     [
                         'text' => 'Github',
                         'type' => 'primary',
-                        'icon' => 'fab fa-github',
+                        'icon' => 'fa fa-github',
                         'href' => 'https://github.com/hichxm/openclassrooms-kasa',
                     ],
                     [
                         'text' => 'Visiter',
                         'type' => 'outline-primary',
-                        'icon' => 'fas fa-globe',
+                        'icon' => 'fa fa-globe',
                         'href' => 'https://hichxm.github.io/openclassrooms-kasa/',
+                    ]
+                ],
+            ],
+            [
+                'name' => 'Nina Carducci - Photographe',
+                'link' => 'https://hichxm.github.io/openclassrooms-nina-carducci/',
+                'description' => 'Optimisation SEO, accessibilité et performance du portfolio de la photographe fictive Nina Carducci.',
+                'image_path' => 'nina.webp',
+                'tags' => [
+                    'HTML & CSS',
+                    'JavaScript',
+                    'Optimization',
+                    'Google PageSpeed',
+                ],
+                'links' => [
+                    [
+                        'text' => 'Github',
+                        'type' => 'primary',
+                        'icon' => 'fa fa-github',
+                        'href' => 'https://github.com/hichxm/openclassrooms-nina-carducci/tree/optimization',
+                    ],
+                    [
+                        'text' => 'Visiter',
+                        'type' => 'outline-primary',
+                        'icon' => 'fa fa-globe',
+                        'href' => 'https://hichxm.github.io/openclassrooms-nina-carducci/',
                     ]
                 ],
             ],
