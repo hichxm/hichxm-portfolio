@@ -151,7 +151,7 @@ class HomeController
                     [
                         'text' => 'Visiter',
                         'type' => 'outline-primary',
-                        'icon' => 'fa fa-github',
+                        'icon' => 'fa fa-globe',
                         'href' => 'https://hichxm.github.io/openclassrooms-booki',
                     ],
                 ],
