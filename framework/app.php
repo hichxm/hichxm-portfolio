@@ -11,8 +11,10 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 
-$dotenv = new Dotenv();
-$dotenv->loadEnv(__DIR__ . '/../.env');
+if(file_exists(__DIR__ . '/../.env.local')) {
+    $dotenv = new Dotenv();
+    $dotenv->loadEnv(__DIR__ . '/../.env');
+}
 
 $request = Request::createFromGlobals();
 
