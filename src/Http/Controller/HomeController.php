@@ -213,7 +213,7 @@ class HomeController
 
     public static function home(Request $request, Response $response): Response
     {
-        $content = render_template('layout.twig', [
+        $content = render_template('home.twig', [
             'data' => self::DATA,
         ]);
 
