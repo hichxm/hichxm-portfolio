@@ -6,6 +6,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
+use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
@@ -24,10 +26,16 @@ $context = new RequestContext();
 $context->fromRequest($request);
 $matcher = new UrlMatcher($routes, $context);
 
-try {
-    $parameters = $matcher->match($request->getPathInfo());
+$controllerResolver = new ControllerResolver();
+$argumentResolver = new ArgumentResolver();
 
-    $response = call_user_func($parameters['_controller'], $request, new Response());
+try {
+    $request->attributes->add($matcher->match($request->getPathInfo()));
+
+    $controller = $controllerResolver->getController($request);
+    $arguments = $argumentResolver->getArguments($request, $controller);
+
+    $response = call_user_func_array($controller, $arguments);
 } catch (ResourceNotFoundException|MethodNotAllowedException $notFoundException) {
     $response = new Response('Not found', 404);
 } catch (Exception $exception) {

@@ -5,7 +5,7 @@ namespace Hichxm\Http\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class HomeController
+class HomeController extends Controller
 {
     public const DATA = [
         'categories' => [
@@ -316,15 +316,12 @@ class HomeController
         ]
     ];
 
-    public static function home(Request $request, Response $response): Response
+    public function home(Request $request): Response
     {
         $content = render_template('home.twig', [
             'data' => self::DATA,
         ]);
 
-        $response->setContent($content);
-        $response->setStatusCode(200);
-
-        return $response;
+        return $this->response($content);
     }
 }
