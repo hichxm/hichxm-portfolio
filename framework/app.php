@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 
-if(file_exists(__DIR__ . '/../.env.local')) {
+if(file_exists(__DIR__ . '/../.env')) {
     $dotenv = new Dotenv();
     $dotenv->loadEnv(__DIR__ . '/../.env');
 }
