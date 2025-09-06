@@ -6,7 +6,7 @@ services:
     deploy:
       replicas: 1
     labels:
-      - caddy=hichxm.apprentisconnect.fr
+      - caddy="hichxm.apprentisconnect.fr, hichxm.fr"
       - caddy.reverse_proxy="{{upstreams http 80}}"
     networks:
       - caddy_network
