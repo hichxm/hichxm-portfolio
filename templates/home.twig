@@ -2,18 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
-    <link
-            href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-            rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Hicham SLIMANI portfolio"/>
+    <meta name="author" content="Hicham SLIMANI"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"/>
 
-    <title>Reflux HTML CSS Template</title>
+    <title>Hichxm | Portfolio</title>
     <!--
     Reflux Template
     https://templatemo.com/tm-531-reflux
@@ -38,7 +32,7 @@
             <i class="fa fa-times" id="menu-close"></i>
             <div class="container">
                 <div class="image">
-                    <a href="#"><img src="assets/images/author-image.png" alt=""/></a>
+                    <a href="#"><img src="assets/images/author-image.png" alt="Hicham SLIMANI"/></a>
                 </div>
                 <div class="author-content">
                     <h4>Hicham SLIMANI</h4>
@@ -67,9 +61,9 @@
                         </li>
                     </ul>
                 </div>
-{#                <div class="copyright-text">#}
-{#                    <p>Copyright 2019 Reflux Design</p>#}
-{#                </div>#}
+                {#                <div class="copyright-text"> #}
+                {#                    <p>Copyright 2019 Reflux Design</p> #}
+                {#                </div> #}
             </div>
         </div>
     </div>
@@ -83,7 +77,7 @@
                 <p class="h4" style="line-height: 2rem;">
                     💻 <b class="font-weight-bold">Développeur web</b>, je conçois des sites
                     et applications sur mesure, accessibles et performants. J’apporte des solutions simples et
-                    efficaces pour accompagner les entreprises dans leur transformation digitale. <br /> <br />
+                    efficaces pour accompagner les entreprises dans leur transformation digitale. <br/> <br/>
                 </p>
                 <p class="h4 font-weight-bold" style="line-height: 2rem;">
                     Mon approche allie rigueur technique, polyvalence et proximité afin de
@@ -120,7 +114,10 @@
                                 <div class="row" style="gap: 2rem 0;">
                                     {% for element in subCategory.elements %}
                                         <div class="col-6 col-sm-3 d-flex justify-content-between align-items-center flex-column">
-                                            <img class="mx-auto d-block" style="object-fit: contain; width: 100%; max-width: 100px;" src="assets/images/tools/{{ element.image_path }}" alt="{{ element.name }}">
+                                            <img class="mx-auto d-block"
+                                                 style="object-fit: contain; width: 100%; max-width: 100px;"
+                                                 src="assets/images/tools/{{ element.image_path }}"
+                                                 alt="{{ element.name }}">
                                             <div class="mt-3 text-center">
                                                 <span>{{ element.name|e }}</span>
                                             </div>
@@ -149,15 +146,20 @@
                 {% for project in data.projects %}
                     <div class="card mb-4" style="background-color: #2125297E;">
                         <div class="row no-gutters">
-                            <a href="{{ project.link }}" target="_blank" class="col-md-5 overflow-hidden position-relative {{ loop.index % 2 == 0 ? 'order-md-1 rounded-right' : 'rounded-left' }}">
-                                <div class="w-100 h-100 position-absolute p-1 d-flex justify-content-end align-items-end" style="background-color: rgba(0,0,0,0.1);">
-                                    <div class="d-flex flex-sm-row flex-column flex-wrap-reverse justify-content-end" style="gap: 0.25rem;">
+                            <a href="{{ project.link }}" target="_blank"
+                               class="col-md-5 overflow-hidden position-relative {{ loop.index % 2 == 0 ? 'order-md-1 rounded-right' : 'rounded-left' }}">
+                                <div class="w-100 h-100 position-absolute p-1 d-flex justify-content-end align-items-end"
+                                     style="background-color: rgba(0,0,0,0.1);">
+                                    <div class="d-flex flex-sm-row flex-column flex-wrap-reverse justify-content-end"
+                                         style="gap: 0.25rem;">
                                         {% for tag in project.tags %}
-                                            <span style="background-color: rgb(0, 0, 0, 0.7);" class="badge badge-outline-primary border border-primary font-weight-normal shadow px-2 py-1 text-white-90">{{ tag }}</span>
+                                            <span style="background-color: rgb(0, 0, 0, 0.7);"
+                                                  class="badge badge-outline-primary border border-primary font-weight-normal shadow px-2 py-1 text-white-90">{{ tag }}</span>
                                         {% endfor %}
                                     </div>
                                 </div>
-                                <img src="assets/images/project/{{ project.image_path }}" class="h-100" style="object-fit: cover" alt="{{ project.name }}">
+                                <img src="assets/images/project/{{ project.image_path }}" class="h-100"
+                                     style="object-fit: cover" alt="{{ project.name }}">
                             </a>
                             <div class="col-md-7">
                                 <div class="card-body d-flex flex-column justify-content-between h-100">
@@ -168,7 +170,8 @@
                                     {% if (project.links) %}
                                         <div>
                                             {% for link in project.links %}
-                                                <a href="{{ link.href }}" target="_blank" class="text-white btn btn-{{ link.type ?? 'primary' }}">
+                                                <a href="{{ link.href }}" target="_blank"
+                                                   class="text-white btn btn-{{ link.type ?? 'primary' }}">
                                                     {% if link.icon %}
                                                         <i class="{{ link.icon }}"></i>
                                                     {% endif %}
