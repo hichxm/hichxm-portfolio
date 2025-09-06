@@ -157,6 +157,33 @@ class HomeController
                 ],
             ],
             [
+                'name' => 'Hicham SLIMANI — Portfolio',
+                'link' => 'https://hichxm.fr/',
+                'description' => 'Réalisation de mon portfolio personnel avec un backend Symfony et une intégration continue avec GitHub Actions.',
+                'image_path' => 'hichxm.webp',
+                'tags' => [
+                    'PHP',
+                    'Symfony',
+                    'Docker',
+                    'GitHub Actions',
+                    'Continuous Integration',
+                ],
+                'links' => [
+                    [
+                        'text' => 'Github',
+                        'type' => 'primary',
+                        'icon' => 'fa fa-github',
+                        'href' => 'https://github.com/hichxm/hichxm-portfolio/',
+                    ],
+                    [
+                        'text' => 'Visiter',
+                        'type' => 'outline-primary',
+                        'icon' => 'fa fa-globe',
+                        'href' => 'https://hichxm.fr/',
+                    ]
+                ],
+            ],
+            [
                 'name' => 'Kasa - Chez vous, partout et ailleurs',
                 'link' => 'https://hichxm.github.io/openclassrooms-kasa/',
                 'description' => 'Intégration d\'une maquette Figma pour l\'entreprise fictive Kasa (agence immobilière) avec React en respectant au mieux les bonnes pratiques du framework.',
