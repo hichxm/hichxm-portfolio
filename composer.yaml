@@ -1,0 +1,16 @@
+services:
+  website:
+    container_name: website
+    restart: always
+    image: registry.vps.apprentisconnect.fr/hichxm-fr
+    deploy:
+      replicas: 1
+    labels:
+      - caddy=hichxm.apprentisconnect.fr
+      - caddy.reverse_proxy="{{upstreams http 80}}"
+    networks:
+      - caddy_network
+
+networks:
+  caddy_network:
+    external: true
