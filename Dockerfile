@@ -19,4 +19,6 @@ RUN a2enmod rewrite
 COPY ./ /opt/website
 WORKDIR /opt/website
 
+RUN chown www-data:www-data -R ./
+
 RUN php /tmp/composer.phar install --no-dev
