@@ -209,6 +209,84 @@ class HomeController
                 ],
             ],
         ],
+        'testimonials' => [
+//            [
+//                'author' => 'Antonio Tina alternant à Lynx Business',
+//                'content' => '
+//                    “Il est très passionné par le code. Il aime
+//                    apprendre même pendant son temps libre.
+//                    Il a pris 4 alternants/apprentis sous son
+//                    aile et ne se lasse pas de nous enseigner.
+//                    Un excellent ajout à n\'importe quelle
+//                    équipe !”
+//                ',
+//            ],
+            [
+                'author' => 'Pierre de MEDCOM',
+                'content' => '
+                    “Hicham a su aller immédiatement aux sources 
+                    potentielles du problème et nous a aiguillé 
+                    sur des pistes pour un environnement de travail 
+                    plus serein. Il nous avait prévenu qu\'il pensait 
+                    régler le problème en une heure et effectivement, 
+                    le bug avait été corrigé en 40 minutes. ”
+                ',
+            ],
+            [
+                'author' => 'Jimmy Hoareau de DigitaWeb',
+                'content' => '
+                    “Très bonne mission, très bon relationnel.
+                    Un développeur qui n’a pas peur de
+                    prendre le téléphone pour comprendre le
+                    besoin et vite trouver des solutions, c’est
+                    rare !”
+                ',
+            ],
+            [
+                'author' => 'Josue de DIGIT',
+                'content' => '
+                    “Disponible et très réactif, Hicham a su déployer 
+                    en un temps record notre solution sur nos 
+                    serveurs OVH. Parfaite maitrise du PHP et de 
+                    Laravel. Un plaisir de collaborer avec lui ”
+                ',
+            ],
+            [
+                'author' => 'Faryal Bezahaf de Fauvert Professionnel',
+                'content' => '
+                    “Réactif, efficace et professionnel. Très
+                    contente d\'avoir pu travailler avec Hicham
+                    sur la migration de notre site web
+                    e-commerce. Je recommande vivement.”
+                ',
+            ],
+//            [
+//                'author' => 'Thibault de ThankYouLab',
+//                'content' => '
+//                    “Excellente expérience avec Hicham. Très
+//                    réactif et un travail de super qualité. Je
+//                    recommande.”
+//                ',
+//            ],
+            [
+                'author' => 'Amadou de Amadou-Warr SOW',
+                'content' => '
+                    “Monsieur SLIMANI a réalisé une mission 
+                    de formateur en développement auprès d\'un 
+                    public exigeant, il est un interlocuteur passionné, 
+                    compétent et serviable et sait s\'adapter aux 
+                    situations complexes.”
+                ',
+            ],
+//            [
+//                'author' => 'Thierry de WebCom',
+//                'content' => '
+//                    “Hicham est extrêmement réactif, très performant.
+//                    À l\'écoute de son client. Pas de conflit juste
+//                    des conseils avisés. Vraiment je recommande a 100%”
+//                ',
+//            ]
+        ]
     ];
 
     public static function home(Request $request, Response $response): Response
