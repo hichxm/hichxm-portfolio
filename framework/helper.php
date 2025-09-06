@@ -45,6 +45,7 @@ if (!function_exists('render_template')) {
 if (!function_exists('isDebugMode')) {
     function isDebugMode(): bool
     {
-        return $_ENV['APP_DEBUG'] == 'true';
+        return isset($_ENV['APP_DEBUG'])
+            && $_ENV['APP_DEBUG'] == 'true';
     }
 }
