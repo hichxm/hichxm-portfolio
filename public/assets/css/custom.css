@@ -2,6 +2,10 @@
     --primary-color: #1b8cb5;
 }
 
+html {
+    background-color: var(--primary-color, #1b8cb5);
+}
+
 .text-white-90 {
     color: rgba(255,255,255,.9) !important;
 }
