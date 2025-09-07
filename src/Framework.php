@@ -4,23 +4,22 @@ namespace Hichxm;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
-use Symfony\Component\HttpKernel\Controller\ControllerResolver;
-use Symfony\Component\Routing\Exception\MethodNotAllowedException;
+use Symfony\Component\HttpKernel\Controller\ArgumentResolverInterface;
+use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
-use Symfony\Component\Routing\Matcher\UrlMatcher;
+use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
 
 class Framework
 {
 
-    private UrlMatcher $matcher;
-    private ControllerResolver $controllerResolver;
-    private ArgumentResolver $argumentResolver;
+    private UrlMatcherInterface $matcher;
+    private ControllerResolverInterface $controllerResolver;
+    private ArgumentResolverInterface $argumentResolver;
 
     public function __construct(
-        UrlMatcher $matcher,
-        ControllerResolver $controllerResolver,
-        ArgumentResolver $argumentResolver
+        UrlMatcherInterface $matcher,
+        ControllerResolverInterface $controllerResolver,
+        ArgumentResolverInterface $argumentResolver
     ) {
         $this->argumentResolver = $argumentResolver;
         $this->controllerResolver = $controllerResolver;

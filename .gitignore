@@ -6,3 +6,5 @@ cache/*
 !cache/.gitkeep
 
 .env
+
+.phpunit.result.cache
