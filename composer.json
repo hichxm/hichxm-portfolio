@@ -6,6 +6,9 @@
     "symfony/routing": "^v7.3.2",
     "twig/twig": "^v3.21.1"
   },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5.36"
+  },
   "autoload": {
     "psr-4": {
       "Hichxm\\": "src/"
