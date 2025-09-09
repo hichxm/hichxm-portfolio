@@ -54,7 +54,7 @@ jobs:
         shell: bash
         run: |
           VERSION_PREFIX=""
-          VERSION_MAJOR_MINOR="1.1"
+          VERSION_MAJOR_MINOR="1.2"
           VERSION_PATCH=$(git tag --list "${VERSION_PREFIX}${VERSION_MAJOR_MINOR}.*" --sort=-version:refname | head -n 1 | grep -oE '[0-9]+$' || true)
           if [ -z "$VERSION_PATCH" ]; then
             VERSION_PATCH=0
